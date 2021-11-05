@@ -26,11 +26,16 @@ namespace dz2._2
 
             WriteLine("Нажмите на любую кнопку, чтобы вывести информацию по баллам");
             ReadKey();
+            Console.Clear();
             WriteLine($"{"Баллы по информатике ||",25}{computerScienceScore,10}");
             WriteLine($"{"Баллы по математике ||",25}{mathScore,10}");
             WriteLine($"{"Баллы по физике ||",25}{physicsScore,10}");
             WriteLine($"{"Сумма баллов ||",25}{sumScores,10}");
-            WriteLine($"{"Средний балл ||",25}{averageScores,10}");
+
+            int centerX = (Console.WindowWidth / 2) - (35 / 2);
+            int centerY = (Console.WindowHeight / 2) - 1;
+            SetCursorPosition(centerX, centerY);
+            Write($"{"Средний балл ||",25}{averageScores,10}");
 
             ReadLine();
         }
